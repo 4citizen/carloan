@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="500.0" prefWidth="688.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.Carloan.controller.ClienteAnnulla2Controller">
+   <top>
+      <VBox alignment="TOP_CENTER" prefHeight="152.0" prefWidth="688.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="TOP_CENTER" prefHeight="49.0" prefWidth="122.0" text="Carloan" textOverrun="CLIP">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label contentDisplay="TOP" text="Annulla Prenotazione">
+               <font>
+                  <Font name="System Italic" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../risorse/img-ico/annulla-prenota.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <HBox prefHeight="151.0" prefWidth="688.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="304.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="207.0" text="Data inizio Noleggio">
+                     <VBox.margin>
+                        <Insets top="35.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="dataInizio" disable="true" editable="false">
+                     <VBox.margin>
+                        <Insets left="15.0" top="3.0" />
+                     </VBox.margin>
+                  </DatePicker>
+               </children>
+               <HBox.margin>
+                  <Insets left="15.0" right="15.0" top="15.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="335.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="196.0" text="Data Odierna" textAlignment="CENTER">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="35.0" />
+                     </VBox.margin>
+                  </Label>
+                  <DatePicker fx:id="dataOdierna" disable="true" editable="false">
+                     <VBox.margin>
+                        <Insets left="15.0" />
+                     </VBox.margin>
+                  </DatePicker>
+               </children>
+               <HBox.margin>
+                  <Insets left="15.0" right="15.0" top="15.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="30.0" />
+         </BorderPane.margin>
+      </HBox>
+   </center>
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="193.0" prefWidth="688.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnGoToAnnulla" mnemonicParsing="false" onAction="#GoToAnnulla" text="Indietro">
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../risorse/img-ico/indietro.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </Button>
+            <VBox alignment="CENTER" prefHeight="154.0" prefWidth="352.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="50.0" prefWidth="324.0" text="Un Contratto potrà essere annullato soltanto se  " textAlignment="CENTER">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="50.0" prefWidth="336.0" text="la data di inizio del contratto di noleggio è di " textAlignment="CENTER">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="50.0" prefWidth="324.0" text="almeno un giorno successivo alla data odierna" textAlignment="CENTER">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <Button fx:id="btnAnnulla" contentDisplay="TOP" mnemonicParsing="false" onAction="#annullaContratto" text="Annulla Prenotazione">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../risorse/img-ico/annulla-prenota.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="30.0" />
+         </BorderPane.margin>
+      </HBox>
+   </bottom>
+</BorderPane>

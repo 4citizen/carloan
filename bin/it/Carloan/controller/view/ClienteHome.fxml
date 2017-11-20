@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="460.0" prefWidth="440.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.Carloan.controller.ClienteHomeController">
+   <top>
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Carloan">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="Benvenuto Cliente: " textAlignment="CENTER">
+                     <font>
+                        <Font name="System Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="Cliente">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <HBox fillHeight="false" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" minWidth="220.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Button fx:id="btnGoPrenota" contentDisplay="TOP" mnemonicParsing="false" onAction="#goToPrenota" prefWidth="130.0" text="Prenota">
+                     <VBox.margin>
+                        <Insets bottom="40.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../risorse/img-ico/prenota.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnGoAnnulla" contentDisplay="TOP" mnemonicParsing="false" onAction="#gotoAnnulla" prefWidth="130.0" text="Annulla Prenotazione">
+                     <graphic>
+                        <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../risorse/img-ico/annulla-prenota.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" minWidth="220.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Button fx:id="btnGoModifica" contentDisplay="TOP" mnemonicParsing="false" onAction="#goToModifica" prefWidth="130.0" text="Modifica Dati Cliente">
+                     <VBox.margin>
+                        <Insets bottom="40.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../risorse/img-ico/modifica-cliente.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnGoPaga" contentDisplay="TOP" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#goToPaga" prefWidth="130.0" text="Paga">
+                     <graphic>
+                        <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../risorse/img-ico/paga.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></Button>
+               </children>
+            </VBox>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </HBox>
+   </center>
+   <bottom>
+      <Button fx:id="btnLogout" contentDisplay="TOP" mnemonicParsing="false" onAction="#goToHomepage" text="Logout" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="20.0" top="20.0" />
+         </BorderPane.margin>
+         <graphic>
+            <ImageView fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../risorse/img-ico/logout.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </bottom>
+</BorderPane>
